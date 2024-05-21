@@ -11,6 +11,7 @@ const Results = ({ data }) => {
       setShowResults(false);
     }
   }, [data]);
+
   if (!data) return null;
 
   const { age, gender, country } = data;

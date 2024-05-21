@@ -4,6 +4,7 @@ import { useState } from "react";
 import NameForm from "./components/NameForm";
 import Results from "./components/Results";
 import { fetchData } from "./utils/api";
+import Loading from "./components/Loading";
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -29,9 +30,11 @@ export default function Home() {
     <main
       className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center py-12"
       style={{ backgroundImage: "url('/images/background.jpg')" }}>
-      <h1 className="text-3xl font-bold mb-8 animate-float">Who Are You</h1>
+      <h1 className="text-3xl font-bold mb-8 animate-float text-primary">
+        Guess the Age, Gender, and Country
+      </h1>
       <NameForm onSubmit={handleFormSubmit} />
-      {loading && <p className="mt-4 text-blue-500">Loading...</p>}
+      {loading && <Loading />}
       {error && <p className="mt-4 text-red-500">{error}</p>}
       <Results data={data} />
     </main>
