@@ -26,7 +26,9 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center py-12 bg-gray-100">
+    <main
+      className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center py-12"
+      style={{ backgroundImage: "url('/images/background.jpg')" }}>
       <h1 className="text-3xl font-bold mb-8 animate-float">Who Are You</h1>
       <NameForm onSubmit={handleFormSubmit} />
       {loading && <p className="mt-4 text-blue-500">Loading...</p>}
