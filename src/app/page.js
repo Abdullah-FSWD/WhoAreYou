@@ -5,6 +5,7 @@ import NameForm from "./components/NameForm";
 import Results from "./components/Results";
 import { fetchData } from "./utils/api";
 import Loading from "./components/Loading";
+import Error from "./components/Error";
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -31,11 +32,11 @@ export default function Home() {
       className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center py-12"
       style={{ backgroundImage: "url('/images/background.jpg')" }}>
       <h1 className="text-3xl font-bold mb-8 animate-float text-primary">
-        Guess the Age, Gender, and Country
+        Who Are You
       </h1>
       <NameForm onSubmit={handleFormSubmit} />
       {loading && <Loading />}
-      {error && <p className="mt-4 text-red-500">{error}</p>}
+      {error && <Error message={error} />}
       <Results data={data} />
     </main>
   );

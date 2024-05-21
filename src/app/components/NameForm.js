@@ -23,7 +23,7 @@ const NameForm = ({ onSubmit }) => {
       />
       <button
         type="submit"
-        className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+        className="px-4 py-2 bg-accent text-black rounded-md hover:bg-background hover:animate-wiggle ">
         Guess
       </button>
     </form>
