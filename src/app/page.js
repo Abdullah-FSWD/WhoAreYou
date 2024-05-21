@@ -26,10 +26,8 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between py-12 bg-gray-100">
-      <h1 className="text-3xl font-bold mb-8">
-        Guess the Age, Gender, and Country
-      </h1>
+    <main className="min-h-screen flex flex-col items-center justify-center py-12 bg-gray-100">
+      <h1 className="text-3xl font-bold mb-8 animate-float">Who Are You</h1>
       <NameForm onSubmit={handleFormSubmit} />
       {loading && <p className="mt-4 text-blue-500">Loading...</p>}
       {error && <p className="mt-4 text-red-500">{error}</p>}
@@ -37,4 +35,3 @@ export default function Home() {
     </main>
   );
 }
-
