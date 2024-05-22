@@ -17,6 +17,7 @@ module.exports = {
         fadeIn: "fadeIn 0.5s ease-in-out forwards",
         fadeUp: "fadeUp 0.5s ease-in-out forwards",
         wiggle: "wiggle 1s ease-in-out infinite",
+        rgbBorder: "rgb-border 3s infinite",
       },
       keyframes: {
         fadeIn: {
@@ -30,6 +31,12 @@ module.exports = {
         wiggle: {
           "0%, 100%": { transform: "rotate(-5deg)" },
           "50%": { transform: "rotate(5deg)" },
+        },
+        rgbBorder: {
+          "0%": { borderColor: "rgb(255, 0, 0)" },
+          "33%": { borderColor: "rgb(0, 255, 0)" },
+          "66%": { borderColor: "rgb(0, 0, 255)" },
+          "100%": { borderColor: "rgb(255, 0, 0)" },
         },
       },
     },
