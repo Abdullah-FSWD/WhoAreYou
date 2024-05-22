@@ -29,7 +29,7 @@ const Results = ({ data }) => {
         <h2 className="text-xl font-semibold mb-2">Gender</h2>
         <p className="text-gray-700">{gender.gender}</p>
       </div>
-      <div className="p-4 border rounded-md shadow-md bg-white animate-fadeIn animate-wiggle">
+      <div className="p-4 border rounded-md shadow-md bg-white animate-fadeIn animate-wiggle hover:animate-rgbBorder">
         <h2 className="text-xl font-semibold mb-2">Country</h2>
         <p className="text-gray-700">
           {country.country.length > 0
